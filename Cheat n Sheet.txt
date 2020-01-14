@@ -1,0 +1,66 @@
+Cheat n Sheet
+
+MaterialApp() adalah Materilize untuk flutter
+Scaffold() adalah tampilan dasar dari sebuah tampilan aplikasi android yang memiliki beberapa property seperti Appbar dan Body
+
+TextView Attribut
+maxLines: 2                        // max tulisan 2 line bisa lebih kalau diganti angkanya
+overflow: TextOverflow.ellipsis   //untuk tulisan menjadi ...
+overflow: TextOverflow.clip       //tidak ada tanda ... tetapi tetap kepotong
+shift + alt + f 		  // untuk auto merapihkan document
+softWrap: false			  // apabila containernya tidak cukup, text tidak akan turun kebawah
+
+// untuk memposisikan tulisan
+textAlign: TextAlign.center	
+textAlign: TextAlign.end
+textAlign: TextAlign.start
+textAlign: TextAlign.justify
+textAlign: TextAlign.left
+textAlign: TextAlign.right
+
+
+style: TextStyle(
+        color: Colors.white,
+        fontStyle: FontStyle.italic,
+        fontWeight: FontWeight.w700,
+        fontSize: 20)  
+
+
+//Column widget widgetnya akan tersusun vertical
+body: Column(
+mainAxisAlignment: MainAxisAlignment.center,   //mainAxisAlignment untuk mengatur posisi column secara vertical
+          children: <Widget>[
+            Text("Text 1"),
+            Text("Text 2"),
+            Text("Text 3")
+          ],
+        )
+
+//Row widget, widgetnya akan tersusun horizontal 
+body: Row(
+mainAxisAlignment: MainAxisAlignment.center,	/mainAxisAlignment untuk mengatur posisi row secara horizontal
+          children: <Widget>[
+            Text("Text 1"),
+            Text("Text 2"),
+            Text("Text 3")
+          ],
+        )
+
+
+
+ body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text("Text 1"),
+            Text("Text 2"),
+            Text("Text 3"),
+            Row(
+              children: <Widget>[
+                Text("Text 4"),
+                Text("Text 5"),
+                Text("Text 6")
+              ],
+            )
+          ],
+        
